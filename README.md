@@ -6,7 +6,9 @@ python3 -m poetry install
 ```
 
 - Build the app using following command
-```python3 setup.py py2app```
+```
+python3 setup.py py2app
+```
 
 - yapf integration
 ```
@@ -14,6 +16,10 @@ python3 -m poetry install
 curl -o pre-commit.sh https://raw.githubusercontent.com/google/yapf/master/plugins/pre-commit.sh
 chmod a+x pre-commit.sh
 mv pre-commit.sh .git/hooks/pre-commit
+```
+- running yapf:
+```
+yapf -i -r -vv -p *.py
 ```
 
 #### Reference:
