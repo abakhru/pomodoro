@@ -11,7 +11,7 @@ class PomodoroApp:
             "continue": "Continue Timer",
             "stop": "Stop Timer",
             "break_message": "Time is up! Take a break :)",
-            "interval": 1500,
+            "interval": 1500
         }
         self.app = rumps.App(self.config["app_name"])
         self.timer = rumps.Timer(self.on_tick, 1)
@@ -19,8 +19,7 @@ class PomodoroApp:
         self.set_up_menu()
         self.start_pause_button = rumps.MenuItem(title=self.config["start"],
                                                  callback=self.start_timer)
-        self.stop_button = rumps.MenuItem(title=self.config["stop"],
-                                          callback=None)
+        self.stop_button = rumps.MenuItem(title=self.config["stop"], callback=None)
         self.app.menu = [self.start_pause_button, self.stop_button]
 
     def set_up_menu(self):
@@ -65,4 +64,4 @@ class PomodoroApp:
 
 if __name__ == '__main__':
     app = PomodoroApp()
-    pp.run()
+    app.run()
